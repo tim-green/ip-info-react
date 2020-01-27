@@ -1,12 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import axios from 'axios'
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import Header from './components/Header';
+import Info from './components/Info';
+import Footer from './components/Footer';
+
+class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { data: {} };
+    };
+
+    componentDidMount() {
+        axios.get('https://ipinfo.io/json?token=ab87dd62ea0099')
+            .then((res) => {
+                this.setState({ data: res.data });
+            });
+    };
+
+    render() {
+        return (
+            <div className="container">
+                <br /><br /><br />
+                <Header ip={this.state.data.ip} />
+                <div className="row">
+                    <div className="column column" style={{ textAlign: 'center' }}>
+                        <Info data={this.state.data} />
+                    </div>
+                </div>
+                <br /><br />
+                <Footer ip={this.state.data.ip} />
+            </div>
+        );
+    };
+};
+
+ReactDOM.render(<App />, document.querySelector('#root'));
