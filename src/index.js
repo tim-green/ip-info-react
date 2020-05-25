@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import axios from 'axios'
-
 import Header from './components/Header';
 import Info from './components/Info';
 import Footer from './components/Footer';
@@ -22,8 +20,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <br /><br /><br />
+            <div className="container" style={{ backgroundColor: '' }}>
                 <Header ip={this.state.data.ip} />
                 <div className="row">
                     <div className="column column" style={{ textAlign: 'center' }}>
