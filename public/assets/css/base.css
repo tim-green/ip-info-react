@@ -1,0 +1,103 @@
+body{
+    background: #f5f5f5;
+    color: #2e2e2e;
+    font-family: 'Nunito', sans-serif;
+}
+
+::selection{
+    background: #2e2e2e;
+    color: #f5f5f5;
+}
+.bg-gradient{
+    background-image: linear-gradient(-131deg, rgb(231, 176, 43) 0%, rgb(193, 62, 81) 100%);
+}
+
+h1{}
+
+h2{
+    font-weight: 800;
+}
+h3{
+    font-weight: 600;
+}
+
+
+h2{
+    color: #DC8D37;
+    background: linear-gradient(-131deg, rgb(231, 176, 43) 0%, rgb(193, 62, 81) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+}
+.ip-info{
+    border: 3px solid;
+    border-top: 0; border-left: 0; border-right: 0;
+    border-image-source: linear-gradient(-131deg, rgb(231, 176, 43) 0%, rgb(193, 62, 81));
+    border-image-slice: 1;
+    padding: 0 2%;
+    display: inline-block;
+}
+
+
+.const-title{
+    text-align: right;
+    font-weight: bold;
+}
+
+.const-title::after{
+    content: ': '
+}
+
+.const-data{
+    text-align: left;
+    padding-left: 0 !important;
+}
+
+.const-data:hover{
+    /*font-weight: bold;*/
+}
+
+.t-data:hover{
+    background-image: linear-gradient(-131deg, rgb(231, 176, 43) 0%, rgb(193, 62, 81) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.row{
+    padding-bottom: .5%;
+}
+
+@media screen and (max-width:645px){
+    .const-title, .const-data{
+        text-align: center;
+    } 
+    .const-title::after{
+        content: '';
+    }
+    .const-data:hover{
+        font-weight: 0;
+    }
+    .row{
+        padding-bottom: 2.5%;
+    }
+}
+
+/*Dark Mode for Apple*/
+@media (prefers-color-scheme: dark) {
+    body{
+        background: #2e2e2e;
+        color: #f5f5f5;
+    }
+    ::selection{
+        color: #2e2e2e;
+        background: #f5f5f5;
+    }
+}
