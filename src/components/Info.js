@@ -9,27 +9,39 @@ class Info extends React.Component {
                 <div>
                     <div className="row">
                         <div className="column">
-                            <h3>Information</h3>
+                            <h3 class="ip-info">IP Information</h3>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="column column-50" style={{ textAlign: 'right' }}>
-                            <div>Country :</div>
-                            <div>Region :</div>
-                            <div>City :</div>
-                            <div>Latitude :</div>
-                            <div>Longitude :</div>
-                            <div>Organisation :</div>
-                        </div>
-                        <div className="column column-50" style={{ textAlign: 'left' }}>
-                            <div>{country}</div>
-                            <div>{region}</div>
-                            <div>{city}</div>
-                            <div>{locSplit[0]}</div>
-                            <div>{locSplit[1]}</div>
-                            <div>{org}</div>
-                        </div>
+                    <div class="row t-data">
+                        <div class="column const-title">Country</div>
+                        <div class="column const-data">{country}</div>
                     </div>
+
+                    <div class="row t-data">
+                        <div class="column const-title">Region</div>
+                        <div class="column const-data">{region}</div>
+                    </div>
+
+                    <div class="row t-data">
+                        <div class="column const-title">City</div>
+                        <div class="column const-data">{city}</div>
+                    </div>
+
+                    <div class="row t-data">
+                        <div class="column const-title">Latitude</div>
+                        <div class="column const-data">{locSplit[0]}</div>
+                    </div>
+
+                    <div class="row t-data">
+                        <div class="column const-title">Longitude</div>
+                        <div class="column const-data">{locSplit[1]}</div>
+                    </div>
+
+                    <div class="row t-data">
+                        <div class="column const-title">Organisation</div>
+                        <div class="column const-data">{org}</div>
+                    </div>
+
                 </div>
             );
         } else {
