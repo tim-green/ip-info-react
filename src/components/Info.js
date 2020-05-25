@@ -2,7 +2,7 @@ import React from 'react';
 
 class Info extends React.Component {
     render() {
-        const { country, region, city, loc, org } = this.props.data;
+        const { country, region, city, loc, org, timezone } = this.props.data;
         const locSplit = String(loc).split(',');
         if (this.props.data.ip) {
             return (
@@ -40,6 +40,11 @@ class Info extends React.Component {
                     <div class="row t-data">
                         <div class="column const-title">Organisation</div>
                         <div class="column const-data">{org}</div>
+                    </div>
+
+                    <div class="row t-data">
+                        <div class="column const-title">Timezone</div>
+                        <div class="column const-data">{timezone}</div>
                     </div>
 
                 </div>
