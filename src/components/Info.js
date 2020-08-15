@@ -12,9 +12,10 @@ class Info extends React.Component {
                             <h3 class="ip-info">IP Information</h3>
                         </div>
                     </div>
+
                     <div class="row t-data">
-                        <div class="column const-title">Country</div>
-                        <div class="column const-data">{country}</div>
+                        <div class="column const-title">City</div>
+                        <div class="column const-data">{city}</div>
                     </div>
 
                     <div class="row t-data">
@@ -23,10 +24,11 @@ class Info extends React.Component {
                     </div>
 
                     <div class="row t-data">
-                        <div class="column const-title">City</div>
-                        <div class="column const-data">{city}</div>
+                        <div class="column const-title">Country</div>
+                        <div class="column const-data">{country}</div>
                     </div>
 
+                    
                     <div class="row t-data">
                         <div class="column const-title">Latitude</div>
                         <div class="column const-data">{locSplit[0]}</div>
@@ -46,7 +48,6 @@ class Info extends React.Component {
                         <div class="column const-title">Timezone</div>
                         <div class="column const-data">{timezone}</div>
                     </div>
-
                 </div>
             );
         } else {
