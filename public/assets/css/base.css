@@ -72,11 +72,16 @@ hr{
     /*font-weight: bold;*/
 }
 
+.t-data{
+    transition: ease-out .5s;
+}
+
 .t-data:hover{
     background-image: linear-gradient(-131deg, rgb(231, 176, 43) 0%, rgb(193, 62, 81) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
+    transition: ease-in .5s;
 }
 
 .row{
