@@ -6,7 +6,7 @@ class Header extends React.Component {
             return (
                 <div className="row" >
                     <div className="column">
-                        <h2 style={{ textAlign: 'center' }}>Your IP is {this.props.ip}</h2>
+                        <h2 className="ip-title" style={{ textAlign: 'center' }}>The Device <br/>IP Number is<br/> {this.props.ip}</h2>
                     </div>
                 </div>
             );
