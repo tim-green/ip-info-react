@@ -1,6 +1,6 @@
 {
   "name": "ipinfo-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://www.timgreen.ws/react/ipinfo",
   "private": true,
   "dependencies": {
